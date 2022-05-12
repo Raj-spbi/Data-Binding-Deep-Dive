@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Conduit">
         <activity
+            android:name=".databinding.Activity1"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".databinding.Activity1"
+            android:name=".databinding.recycler.Activity2Recycler"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Conduit.NoActionBar">

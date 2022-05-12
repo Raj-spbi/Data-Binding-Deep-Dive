@@ -5,7 +5,10 @@ import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.conduit.databinding.recycler.AdapterRecycler
+import com.example.conduit.databinding.viewmodel.MainViewModel
 import com.google.android.material.textfield.TextInputLayout
 
 @BindingAdapter("app:textwatcher")
@@ -24,3 +27,14 @@ fun error(view: TextInputLayout, errorString: String?) {
 fun loadImage(view: ImageView, url: String?, context: Context) {
     Glide.with(context).load(url).into(view)
 }
+
+/*@BindingAdapter("app:setAdapter")
+fun setAdapter(view: RecyclerView,viewModel: MainViewModel) {
+    view.adapter=viewModel.setAdapter()
+
+
+}*/
+//@BindingAdapter("app:onclick")
+//fun onClick(view: View) {
+////    view.addTextChangedListener(textWatcher)
+//}
