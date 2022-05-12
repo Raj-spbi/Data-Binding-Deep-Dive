@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.conduit.databinding.viewmodel.TestViewModel" />
+
+        <variable
+            name="mContext"
+            type="com.example.conduit.databinding.Activity1" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".databinding.Activity1">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            app:context="@{mContext}"
+            app:imageUrl="@{viewModel.imageUrl}"
+            app:layout_constraintBottom_toTopOf="@+id/etText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text='@{viewModel.textData,default="Hi all"}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="Email"
+            android:text="@={viewModel.etTextInput}"
+            app:layout_constraintBottom_toTopOf="@+id/tv_id"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:error="@{viewModel.errorMsg}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:text="@={viewModel.etTextInputLayout}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{viewModel::handleClick}"
+            android:text='@{viewModel.btnText,default="Test Click"}'
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
