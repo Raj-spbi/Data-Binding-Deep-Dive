@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Conduit/app/src/main/res/layout/activity_1.xml" value="0.1" />
         <entry key="..\:/Conduit/app/src/main/res/layout/activity_activity2_recycler.xml" value="0.1921875" />
+        <entry key="..\:/Conduit/app/src/main/res/layout/activity_test_fdiff_util.xml" value="0.25" />
+        <entry key="..\:/Conduit/app/src/main/res/layout/item_diff_recyclerview.xml" value="0.1921875" />
         <entry key="..\:/Conduit/app/src/main/res/layout/recyc_item.xml" value="0.1921875" />
       </map>
     </option>
