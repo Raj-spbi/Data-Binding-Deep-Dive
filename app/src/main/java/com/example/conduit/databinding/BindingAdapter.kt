@@ -5,10 +5,7 @@ import android.text.TextWatcher
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.conduit.databinding.recycler.AdapterRecycler
-import com.example.conduit.databinding.viewmodel.MainViewModel
 import com.google.android.material.textfield.TextInputLayout
 
 @BindingAdapter("app:textwatcher")
